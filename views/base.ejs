@@ -1,12 +1,18 @@
 <%-include('header')-%>
 
-<div class="divtext-center center-div" id="login">
+<div class="text-center center-div" id="login">
     <div class="container w-25 border border-info py-5">
         <div class="title pb-5">
             <h2 class="font-weight-bold">
                 Login System
             </h2>
             <span>Login for the exixting users</span>
+            <%if(locals.logout){%>
+              <div class="alter alert-success text-center">
+                  Logout Successfuly!!!
+                  <!-- <%logout%> -->
+              </div>
+            <%}%>
         </div>
         <form action="/route/login" method="POST" class="pt-4">
           <div class="form-group">
